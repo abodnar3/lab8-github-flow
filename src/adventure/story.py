@@ -2,6 +2,8 @@ from adventure.utils import read_events_from_file
 from rich import print
 import random
 
+default_message = "You stand still, unsure what to do. The forest swallows you."
+
 def step(choice: str, events):
     random_event = random.choice(events)
 
@@ -11,6 +13,7 @@ def step(choice: str, events):
         return right_path(random_event)
     else:
         return "[italic red]You stand still, unsure what to do. The forest swallows you.[/italic red]"
+
 
 def left_path(event):
     return "[bold blue]You walk left.[/bold blue] [italic blue]" + event + "[/italic blue]"
