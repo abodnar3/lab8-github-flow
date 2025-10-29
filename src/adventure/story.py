@@ -28,6 +28,7 @@ if __name__ == "__main__":
         "[bold purple]right[/bold purple]/[bold red]exit[/bold red]): ", end="")
         choice = input().strip().lower()
         if choice == 'exit':
+            print("[bold red]Goodbye![/bold red]")
             break
         
         print(step(choice, events))
